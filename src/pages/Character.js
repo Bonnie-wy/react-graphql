@@ -1,9 +1,12 @@
 import React from "react";
 import { useCharacter } from "../hooks/useCharacter";
+import { useParams } from "react-router";
 import "./Character.css";
 
 export default function Character() {
-  const { data, loading, error } = useCharacter(4);
+  const { id } = useParams();
+
+  const { data, loading, error } = useCharacter(id);
 
   if (loading) return <div>spinner... </div>;
 
