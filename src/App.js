@@ -6,11 +6,13 @@ import Search from "./pages/Search";
 
 function App() {
   return (
-    <Routes>
-      <Route strict exact path="/" element={<CharacterList />} />
-      <Route strict exact path="/search" element={<Search />} />
-      <Route strict exact path="/:id" element={<Character />} />
-    </Routes>
+    <div className="App">
+      <Routes>
+        <Route strict exact path="/" element={<CharacterList />} />
+        <Route strict exact path="/search" element={<Search />} />
+        <Route strict exact path="/:id" element={<Character />} />
+      </Routes>
+    </div>
   );
 }
 
